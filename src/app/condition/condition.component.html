@@ -1,0 +1,19 @@
+<input type="text"
+    class="form-control"
+    (input)="onInputEnter($event)" >
+<button 
+    type="button"
+    class="btn btn-primary"
+    (click)="onNameClick($event)">Click</button>
+
+<!-- <p>{{ enteredName }}</p> -->
+<p *ngIf="buttonPressed">Button is pressed. Entered name is {{ enteredName }}</p>
+
+<p *ngIf="consumerName; else noName">
+    This is condition component!
+</p>
+<ng-template #noName>
+    <p>
+        This is NOT condition component!
+    </p>
+</ng-template>
